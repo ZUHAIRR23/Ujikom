@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Home Page</title>
+    <style>
+        .fade-in {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="pt-20 bg-white text-gray-800 font-sans">
+    <header class="bg-white fixed top-0 w-full z-50 shadow-md">
+        <div class="container mx-auto py-4 px-6 flex justify-center items-center relative">
+            <nav>
+                <ul class="flex space-x-8 text-gray-800 font-semibold text-[20px]">
+                    <li class="relative group">
+                        <a href="#" class="hover:text-cyan-400 transition">Home
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-cyan-400 transition-all group-hover:w-full"></span>
+                        </a>
+                    </li>
+                    <li class="relative group">
+                        <a href="#" class="hover:text-cyan-400 transition">About Us
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-cyan-400 transition-all group-hover:w-full"></span>
+                        </a>
+                    </li>
+                    <li class="relative group">
+                        <a href="#" class="hover:text-cyan-400 transition">Contact
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-cyan-400 transition-all group-hover:w-full"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="absolute right-6 space-x-2">
+                <a href="sign_in_page.html"
+                    class="bg-cyan-400 hover:bg-cyan-500 text-white font-semibold py-2 px-6 rounded-full transition duration-300">
+                    Login
+                </a>
+                <a href="sign_up_page.html"
+                    class="bg-cyan-400 hover:bg-cyan-500 text-white font-semibold py-2 px-6 rounded-full transition duration-300">
+                    Register
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="fade-in">
+                <h2 class="text-5xl md:text-6xl font-extrabold mb-6 text-gray-950 leading-tight">FITNESS</h2>
+                <p class="text-[20px] leading-relaxed text-gray-600 mb-8">
+                    "It's never too late to start living healthy. Whether your goal is to lose weight, build muscle, or
+                    simply feel fitter - we're here to guide you every step of the way."
+                </p>
+                <a href="dashboard_page.html"
+                    class="inline-block bg-cyan-400 text-white px-8 py-3 rounded-lg text-lg font-medium shadow-lg hover:bg-cyan-500 hover:scale-105 transform transition duration-300">
+                    Start From Now
+                </a>
+            </div>
+            <div class="flex justify-center fade-in">
+                <img src="../assets/Group 1.png" alt="Hero Image" class="rounded-2xl w-full max-w-lg" />
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div
+                class="flex justify-center items-center fade-in bg-cyan-400 rounded-2xl w-full max-w-lg h-[400px] shadow-2xl">
+                <h1 class="text-white text-6xl md:text-7xl font-bold text-center leading-tight">
+                    Why<br class="hidden md:block" />Choose Us?
+                </h1>
+            </div>
+            <div class="fade-in">
+                <p class="text-[20px] leading-relaxed text-gray-600 mb-8">
+                    "Our mission is to provide access to effective fitness programs, reliable nutrition, and mental
+                    support so you can become the best version of yourself."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-2xl shadow-2xl hover:shadow-cyan-200 transition duration-300">
+                    <i data-lucide="dumbbell" class="w-12 h-12 text-cyan-400 mb-4 mx-auto"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Expert Trainers</h3>
+                    <p class="text-gray-600">Our certified trainers will guide you to reach your fitness goals safely
+                        and effectively.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-2xl hover:shadow-cyan-200 transition duration-300">
+                    <i data-lucide="clock" class="w-12 h-12 text-cyan-400 mb-4 mx-auto"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Flexible Schedules</h3>
+                    <p class="text-gray-600">Workout anytime that suits your routine with our extended hours and
+                        personalized plans.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-2xl hover:shadow-cyan-200 transition duration-300">
+                    <i data-lucide="heart-pulse" class="w-12 h-12 text-cyan-400 mb-4 mx-auto"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Holistic Wellness</h3>
+                    <p class="text-gray-600">We focus on both physical fitness and mental well-being to keep you
+                        balanced.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 fade-in relative">
+            <div class="absolute -top-6 -left-6 w-32 h-32 border-t-4 border-l-4 border-cyan-400 rounded-tl-xl z-0">
+            </div>
+            <div class="absolute -bottom-6 -right-6 w-32 h-32 border-b-4 border-r-4 border-cyan-400 rounded-br-xl z-0">
+            </div>
+            <div class="relative bg-cyan-400 p-10 rounded-xl shadow-lg z-10 text-white">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-2">Contact Us</h2>
+                <p class="text-[20px] md:text-[25px] mb-8">We here for you 24/7</p>
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-white text-[20px] mb-1">Email</label>
+                        <input type="email" placeholder="Your email here"
+                            class="w-full p-4 rounded-md text-[20px] text-gray-800 placeholder:text-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:border-cyan-400" />
+                    </div>
+                    <div>
+                        <label class="block text-white text-[20px] mb-1">Your Problem</label>
+                        <textarea rows="4" placeholder="Tell us what you need"
+                            class="w-full p-4 rounded-md text-[20px] text-gray-800 placeholder:text-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:border-cyan-400"></textarea>
+                    </div>
+                    <div class="flex justify-start mt-6">
+                        <button type="submit"
+                            class="bg-white text-cyan-400 px-8 py-3 rounded-lg text-lg font-medium shadow-lg hover:bg-gray-100 hover:scale-105 transform transition duration-300">
+                            Send Message
+                        </button>
+                    </div>
+                    <div class="flex justify-end items-center gap-4 mt-6 text-white text-xl">
+                        <a href="https://twitter.com" target="_blank" class="hover:scale-110 transition">
+                            <i data-lucide="twitter" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="hover:scale-110 transition">
+                            <i data-lucide="facebook" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="hover:scale-110 transition">
+                            <i data-lucide="instagram" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-cyan-400 text-center text-gray-500 py-6 text-sm">
+        © 2025 Fitness Life. All rights reserved.
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
