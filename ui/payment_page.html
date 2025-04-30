@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>Payment</title>
+</head>
+
+<body class="flex bg-gray-100 min-h-screen">
+    <!-- SIDEBAR -->
+    <aside class="hidden sm:flex sm:flex-col">
+        <a href="#"
+            class="inline-flex items-center justify-center h-20 w-20 bg-cyan-400 hover:bg-cyan-500 focus:bg-cyan-500">
+            <svg fill="none" viewBox="0 0 64 64" class="h-12 w-12">
+                <title>Company logo</title>
+                <path
+                    d="M32 14.2c-8 0-12.9 4-14.9 11.9 3-4 6.4-5.6 10.4-4.5 2.3.6 4 2.3 5.7 4 2.9 3 6.3 6.4 13.7 6.4 7.9 0 12.9-4 14.8-11.9-3 4-6.4 5.5-10.3 4.4-2.3-.5-4-2.2-5.7-4-3-3-6.3-6.3-13.7-6.3zM17.1 32C9.2 32 4.2 36 2.3 43.9c3-4 6.4-5.5 10.3-4.4 2.3.5 4 2.2 5.7 4 3 3 6.3 6.3 13.7 6.3 8 0 12.9-4 14.9-11.9-3 4-6.4 5.6-10.4 4.5-2.3-.6-4-2.3-5.7-4-2.9-3-6.3-6.4-13.7-6.4z"
+                    fill="#fff" />
+            </svg>
+        </a>
+        <div class="flex-grow flex flex-col justify-between text-gray-500 bg-gray-800">
+            <nav class="flex flex-col mx-4 my-6 space-y-4">
+                <a href="#" class="inline-flex items-center justify-center py-3 text-cyan-300 bg-white rounded-lg">
+                    <span class="sr-only">Payment</span>
+                    <box-icon name='wallet-alt' color="#5CDFEB"></box-icon>
+                </a>
+                <a href="#"
+                    class="inline-flex items-center justify-center py-3 hover:text-gray-400 hover:bg-gray-700 focus:text-gray-400 focus:bg-gray-700 rounded-lg">
+                    <span class="sr-only">Dashboard</span>
+                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                    </svg>
+                </a>
+                <a href="#"
+                    class="inline-flex items-center justify-center py-3 hover:text-gray-400 hover:bg-gray-700 focus:text-gray-400 focus:bg-gray-700 rounded-lg">
+                    <span class="sr-only">Messages</span>
+                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </a>
+                <a href="#"
+                    class="inline-flex items-center justify-center py-3 hover:text-gray-400 hover:bg-gray-700 focus:text-gray-400 focus:bg-gray-700 rounded-lg">
+                    <span class="sr-only">Documents</span>
+                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                </a>
+            </nav>
+            <div class="inline-flex items-center justify-center h-20 w-20 border-t border-gray-700">
+                <button
+                    class="p-3 hover:text-gray-400 hover:bg-gray-700 focus:text-gray-400 focus:bg-gray-700 rounded-lg">
+                    <span class="sr-only">Settings</span>
+                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </aside>
+    <div class="flex-grow text-gray-800">
+        <!-- HEADER -->
+        <header class="flex items-center h-20 px-6 sm:px-10 bg-white">
+            <span class="text-2xl font-bold mr-4">
+                FITNESS
+            </span>
+            <div class="relative w-full max-w-md sm:-ml-2">
+                <input type="text" role="search" placeholder="Search..."
+                    class="py-2 pl-10 pr-4 w-full border-4 border-transparent placeholder-gray-400 focus:bg-gray-50 rounded-lg" />
+            </div>
+            <div class="flex flex-shrink-0 items-center ml-auto">
+                <span class="sr-only">User Menu</span>
+                <div class="hidden md:flex md:flex-col md:items-end md:leading-tight">
+                    <span class="font-semibold">Grace Simmons</span>
+                    <span class="text-sm text-gray-600">Lecturer</span>
+                </div>
+                <span class="h-12 w-12 ml-2 sm:ml-3 mr-2 bg-gray-100 rounded-full overflow-hidden">
+                    <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="user profile photo"
+                        class="h-full w-full object-cover">
+                </span>
+                <div class="border-l pl-3 ml-3 space-x-1">
+                    <button
+                        class="relative p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full">
+                        <span class="sr-only">Notifications</span>
+                        <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full"></span>
+                        <span
+                            class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full animate-ping"></span>
+                        <a href="notification_page.html">
+                            <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                class="h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                        </a>
+                    </button>
+                    <button
+                        class="relative p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full">
+                        <span class="sr-only">Log out</span>
+                        <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="p-8 bg-gray-50 min-h-screen">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-3xl font-bold text-gray-800">Transaction History</h2>
+                <a href="training_page.html"
+                    class="bg-cyan-400 rounded-full p-3 text-white hover:bg-cyan-500 transition">
+                    Continue
+                </a>
+            </div>
+
+            <button id="openModal"
+                class="bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition duration-200 mb-4">
+                Create Payment
+            </button>
+
+            <div class="overflow-x-auto mt-6 bg-white rounded-lg shadow-lg">
+                <table class="min-w-full text-sm text-left text-gray-600">
+                    <thead class="bg-indigo-100 text-gray-800">
+                        <tr>
+                            <th class="py-3 px-6 font-medium">Name</th>
+                            <th class="py-3 px-6 font-medium">Transaction</th>
+                            <th class="py-3 px-6 font-medium">Price</th>
+                            <th class="py-3 px-6 font-medium">Date</th>
+                            <th class="py-3 px-6 font-medium text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-3 px-6">John</td>
+                            <td class="py-3 px-6">Pembayaran</td>
+                            <td class="py-3 px-6">Rp 150.000</td>
+                            <td class="py-3 px-6">2025-04-29</td>
+                            <td class="py-3 px-6 text-center">
+                                <button
+                                    class="bg-red-500 hover:bg-red-600 text-white py-1 px-3 rounded-lg">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-3 px-6">John</td>
+                            <td class="py-3 px-6">Pembayaran</td>
+                            <td class="py-3 px-6">Rp 150.000</td>
+                            <td class="py-3 px-6">2025-04-29</td>
+                            <td class="py-3 px-6 text-center">
+                                <button
+                                    class="bg-red-500 hover:bg-red-600 text-white py-1 px-3 rounded-lg">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-3 px-6">John</td>
+                            <td class="py-3 px-6">Pembayaran</td>
+                            <td class="py-3 px-6">Rp 150.000</td>
+                            <td class="py-3 px-6">2025-04-29</td>
+                            <td class="py-3 px-6 text-center">
+                                <button
+                                    class="bg-red-500 hover:bg-red-600 text-white py-1 px-3 rounded-lg">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <div id="paymentModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center hidden">
+        <div class="bg-white p-8 rounded-2xl shadow-lg w-11/12 md:w-1/2">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Payment Form</h2>
+            <form class="space-y-6">
+                <div>
+                    <label class="block font-medium text-gray-700 mb-2">Transaction Type</label>
+                    <select
+                        class="w-full border-2 border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option>Transfer Bank</option>
+                        <option>QRIS</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-medium text-gray-700 mb-2">Nominal</label>
+                    <input type="number"
+                        class="w-full border-2 border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        placeholder="Contoh: 100000">
+                </div>
+                <div>
+                    <label class="block font-medium text-gray-700 mb-2">Phone Number</label>
+                    <input type="text"
+                        class="w-full border-2 border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        placeholder="Contoh: 081234567890">
+                </div>
+                <div>
+                    <label class="block font-medium text-gray-700 mb-2">Bank Name</label>
+                    <input type="text"
+                        class="w-full border-2 border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+                <div>
+                    <label class="block font-medium text-gray-700 mb-2">Proof of Payment</label>
+                    <input type="file"
+                        class="w-full border-2 border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+                <button
+                    class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition duration-200">Submit</button>
+            </form>
+            <button id="closeModal" class="mt-6 text-center text-indigo-600 font-medium">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const openModalButton = document.getElementById('openModal');
+        const closeModalButton = document.getElementById('closeModal');
+        const modal = document.getElementById('paymentModal');
+        openModalButton.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+        });
+        closeModalButton.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+    </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Notifications</title>
+</head>
+
+<body class="bg-gray-100">
+    <header class="flex items-center h-20 px-6 sm:px-10 bg-white">
+        <span class="text-2xl font-bold mr-4">
+            FITNESS
+        </span>
+        <div class="relative w-full max-w-md sm:-ml-2">
+            <input type="text" role="search" placeholder="Search..."
+                class="py-2 pl-10 pr-4 w-full border-4 border-transparent placeholder-gray-400 focus:bg-gray-50 rounded-lg" />
+        </div>
+        <div class="flex flex-shrink-0 items-center ml-auto">
+            <span class="sr-only">User Menu</span>
+            <div class="hidden md:flex md:flex-col md:items-end md:leading-tight">
+                <span class="font-semibold">Grace Simmons</span>
+                <span class="text-sm text-gray-600">Lecturer</span>
+            </div>
+            <span class="h-12 w-12 ml-2 sm:ml-3 mr-2 bg-gray-100 rounded-full overflow-hidden">
+                <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="user profile photo"
+                    class="h-full w-full object-cover">
+            </span>
+            <div class="border-l pl-3 ml-3 space-x-1">
+                <button
+                    class="relative p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full">
+                    <span class="sr-only">Notifications</span>
+                    <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full"></span>
+                    <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full animate-ping"></span>
+                    <a href="notification_page.html">
+                        <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                        </svg>
+                    </a>
+                </button>
+                <button
+                    class="relative p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full">
+                    <span class="sr-only">Log out</span>
+                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="max-w-2xl mx-auto px-6 py-8">
+        <h2 class="text-3xl font-bold mb-6">Notifications</h2>
+        <ul class="space-y-6">
+            <li class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition">
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJRJREFUSEtjZKAxYKSx+QyjFhAMYZxBpF358T9M99V2fqzqiFEzzCzQqfpw8P9/RjtQkBDjfXQ1ED7jgavtfI6w4EUJIpgGyixgYECOM/pZgN27BFMhXAEuX8N9QHMLQE4Z2nEA8cGn/QwM/x0oSUWMDAx7rrTzu2JNpshRSk4+wJYkhllRQXyqJ17laI1GMKxoHkQAijitGS7/G9UAAAAASUVORK5CYII=" />
+                        <path
+                            d="M6 5v14h3v-6h6v6h3V5h-3v6H9V5zM3 15a1 1 0 0 0 1 1h1V8H4a1 1 0 0 0-1 1v2H2v2h1v2zm18-6a1 1 0 0 0-1-1h-1v8h1a1 1 0 0 0 1-1v-2h1v-2h-1V9z">
+                        </path>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-lg text-gray-800">
+                            <span class="font-semibold">Coach STY</span> Woi jangan bolos.
+                        </p>
+                        <p class="text-sm text-gray-500 mt-2">4 hours ago</p>
+                    </div>
+                </div>
+            </li>
+            <li class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition">
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJRJREFUSEtjZKAxYKSx+QyjFhAMYZxBpF358T9M99V2fqzqiFEzzCzQqfpw8P9/RjtQkBDjfXQ1ED7jgavtfI6w4EUJIpgGyixgYECOM/pZgN27BFMhXAEuX8N9QHMLQE4Z2nEA8cGn/QwM/x0oSUWMDAx7rrTzu2JNpshRSk4+wJYkhllRQXyqJ17laI1GMKxoHkQAijitGS7/G9UAAAAASUVORK5CYII=" />
+                        <path
+                            d="M6 5v14h3v-6h6v6h3V5h-3v6H9V5zM3 15a1 1 0 0 0 1 1h1V8H4a1 1 0 0 0-1 1v2H2v2h1v2zm18-6a1 1 0 0 0-1-1h-1v8h1a1 1 0 0 0 1-1v-2h1v-2h-1V9z">
+                        </path>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-lg text-gray-800">
+                            <span class="font-semibold">Coach STY</span> Woi jangan bolos.
+                        </p>
+                        <p class="text-sm text-gray-500 mt-2">4 hours ago</p>
+                    </div>
+                </div>
+            </li>
+            <li class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition">
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJRJREFUSEtjZKAxYKSx+QyjFhAMYZxBpF358T9M99V2fqzqiFEzzCzQqfpw8P9/RjtQkBDjfXQ1ED7jgavtfI6w4EUJIpgGyixgYECOM/pZgN27BFMhXAEuX8N9QHMLQE4Z2nEA8cGn/QwM/x0oSUWMDAx7rrTzu2JNpshRSk4+wJYkhllRQXyqJ17laI1GMKxoHkQAijitGS7/G9UAAAAASUVORK5CYII=" />
+                        <path
+                            d="M6 5v14h3v-6h6v6h3V5h-3v6H9V5zM3 15a1 1 0 0 0 1 1h1V8H4a1 1 0 0 0-1 1v2H2v2h1v2zm18-6a1 1 0 0 0-1-1h-1v8h1a1 1 0 0 0 1-1v-2h1v-2h-1V9z">
+                        </path>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-lg text-gray-800">
+                            <span class="font-semibold">Coach STY</span> Woi jangan bolos.
+                        </p>
+                        <p class="text-sm text-gray-500 mt-2">4 hours ago</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

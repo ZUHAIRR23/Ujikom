@@ -4,92 +4,236 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <title>Dashboard</title>
 </head>
 
-<body class="bg-white text-gray-800 font-sans">
-    <header class="bg-white sticky top-0 z-50">
-        <div class="container mx-auto py-4 px-6 flex justify-center items-center">
-            <nav>
-                <ul class="flex space-x-8 text-gray-800 font-semibold text-[20px]">
-                    <li class="relative group">
-                        <a href="home_page.html" class="hover:text-cyan-400 transition">Home
-                            <span
-                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-cyan-400 transition-all group-hover:w-full"></span>
-                        </a>
-                    </li>
-                    <li class="relative group">
-                        <a href="#" class="hover:text-cyan-400 transition">About Us
-                            <span
-                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-cyan-400 transition-all group-hover:w-full"></span>
-                        </a>
-                    </li>
-                    <li class="relative group">
-                        <a href="#" class="hover:text-cyan-400 transition">Contact
-                            <span
-                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-cyan-400 transition-all group-hover:w-full"></span>
-                        </a>
-                    </li>
-                </ul>
+<body class="flex bg-gray-100 min-h-screen">
+    <!-- SIDEBAR -->
+    <aside class="hidden sm:flex sm:flex-col">
+        <a href="#"
+            class="inline-flex items-center justify-center h-20 w-20 bg-cyan-400 hover:bg-cyan-500 focus:bg-cyan-500">
+            <svg fill="none" viewBox="0 0 64 64" class="h-12 w-12">
+                <title>Company logo</title>
+                <path
+                    d="M32 14.2c-8 0-12.9 4-14.9 11.9 3-4 6.4-5.6 10.4-4.5 2.3.6 4 2.3 5.7 4 2.9 3 6.3 6.4 13.7 6.4 7.9 0 12.9-4 14.8-11.9-3 4-6.4 5.5-10.3 4.4-2.3-.5-4-2.2-5.7-4-3-3-6.3-6.3-13.7-6.3zM17.1 32C9.2 32 4.2 36 2.3 43.9c3-4 6.4-5.5 10.3-4.4 2.3.5 4 2.2 5.7 4 3 3 6.3 6.3 13.7 6.3 8 0 12.9-4 14.9-11.9-3 4-6.4 5.6-10.4 4.5-2.3-.6-4-2.3-5.7-4-2.9-3-6.3-6.4-13.7-6.4z"
+                    fill="#fff" />
+            </svg>
+        </a>
+        <div class="flex-grow flex flex-col justify-between text-gray-500 bg-gray-800">
+            <nav class="flex flex-col mx-4 my-6 space-y-4">
+                <a href="#"
+                    class="inline-flex items-center justify-center py-3 hover:text-gray-400 hover:bg-gray-700 focus:text-gray-400 focus:bg-gray-700 rounded-lg">
+                    <span class="sr-only">Folders</span>
+                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                    </svg>
+                </a>
+                <a href="#" class="inline-flex items-center justify-center py-3 text-cyan-300 bg-white rounded-lg">
+                    <span class="sr-only">Dashboard</span>
+                    <box-icon name='bar-chart-alt-2' color="#5CDFEB"></box-icon>
+                </a>
+                <a href="#"
+                    class="inline-flex items-center justify-center py-3 hover:text-gray-400 hover:bg-gray-700 focus:text-gray-400 focus:bg-gray-700 rounded-lg">
+                    <span class="sr-only">Messages</span>
+                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </a>
+                <a href="#"
+                    class="inline-flex items-center justify-center py-3 hover:text-gray-400 hover:bg-gray-700 focus:text-gray-400 focus:bg-gray-700 rounded-lg">
+                    <span class="sr-only">Documents</span>
+                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                </a>
             </nav>
+            <div class="inline-flex items-center justify-center h-20 w-20 border-t border-gray-700">
+                <button
+                    class="p-3 hover:text-gray-400 hover:bg-gray-700 focus:text-gray-400 focus:bg-gray-700 rounded-lg">
+                    <span class="sr-only">Settings</span>
+                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </button>
+            </div>
         </div>
-    </header>
-
-    <section class="py-20">
-        <div class="container mx-auto px-6 max-w-4xl text-center">
-            <div class="bg-white rounded-3xl shadow-lg border border-cyan-100 p-10">
-                <div class="flex justify-center mb-6">
-                    <div class="bg-cyan-100 p-4 rounded-full">
-                        <box-icon name='news' type='solid' color='#06b6d4' size="lg"></box-icon>
+    </aside>
+    <div class="flex-grow text-gray-800">
+        <!-- HEADER -->
+        <header class="flex items-center h-20 px-6 sm:px-10 bg-white">
+            <span class="text-2xl font-bold mr-4">
+                FITNESS
+            </span>
+            <div class="relative w-full max-w-md sm:-ml-2">
+                <input type="text" role="search" placeholder="Search..."
+                    class="py-2 pl-10 pr-4 w-full border-4 border-transparent placeholder-gray-400 focus:bg-gray-50 rounded-lg" />
+            </div>
+            <div class="flex flex-shrink-0 items-center ml-auto">
+                <span class="sr-only">User Menu</span>
+                <div class="hidden md:flex md:flex-col md:items-end md:leading-tight">
+                    <span class="font-semibold">Grace Simmons</span>
+                    <span class="text-sm text-gray-600">Lecturer</span>
+                </div>
+                <span class="h-12 w-12 ml-2 sm:ml-3 mr-2 bg-gray-100 rounded-full overflow-hidden">
+                    <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="user profile photo"
+                        class="h-full w-full object-cover">
+                </span>
+                <div class="border-l pl-3 ml-3 space-x-1">
+                    <button
+                        class="relative p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full">
+                        <span class="sr-only">Notifications</span>
+                        <span class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full"></span>
+                        <span
+                            class="absolute top-0 right-0 h-2 w-2 mt-1 mr-2 bg-red-500 rounded-full animate-ping"></span>
+                        <a href="notification_page.html">
+                            <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                class="h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                        </a>
+                    </button>
+                    <button
+                        class="relative p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-600 focus:bg-gray-100 focus:text-gray-600 rounded-full">
+                        <span class="sr-only">Log out</span>
+                        <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- DASHBOARD SECTION -->
+        <main class="p-6 sm:p-10 space-y-6">
+            <!-- CARD SECTION -->
+            <section class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div class="grid col-span-3 p-8 pt-4">
+                    <h1 class="text-2xl font-bold mb-5">LATEST NEWS</h1>
+                    <!-- NEWS SLIDER -->
+                    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                        <!-- Carousel wrapper -->
+                        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                            <!-- Item 1 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="https://i.pinimg.com/736x/a8/c2/8b/a8c28bc94e82c7d5dedc5913b34767e7.jpg"
+                                    class="absolute block w-full h-full" alt="...">
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="https://i.pinimg.com/736x/99/23/9b/99239bfda23c7eaf7635ff5f1abd9722.jpg"
+                                    class="absolute block w-full h-full" alt="...">
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="https://i.pinimg.com/736x/6c/9a/bd/6c9abd17e0693e5b4374dcf762d6044f.jpg"
+                                    class="absolute block w-full h-full" alt="...">
+                            </div>
+                            <!-- Item 4 -->
+                        </div>
+                        <!-- Slider indicators -->
+                        <div
+                            class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                                data-carousel-slide-to="0"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                                data-carousel-slide-to="1"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                                data-carousel-slide-to="2"></button>
+                        </div>
+                        <!-- Slider controls -->
+                        <!-- LEFT BUTTON -->
+                        <button type="button"
+                            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-prev>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 1 1 5l4 4" />
+                                </svg>
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </button>
+                        <!-- RIGHT BUTTON -->
+                        <button type="button"
+                            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-next>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 9 4-4-4-4" />
+                                </svg>
+                                <span class="sr-only">Next</span>
+                            </span>
+                        </button>
                     </div>
                 </div>
-                <h1 class="text-4xl font-bold text-cyan-500 mb-4">Latest News</h1>
-                <p class="text-gray-600 text-lg">
-                    Get the latest updates on health, fitness, and a healthy lifestyle every day on your dashboard.
-                </p>
-            </div>
-        </div>
-    </section>
 
-    <section class="pb-24">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div class="bg-white rounded-3xl shadow-2xl hover:shadow-cyan-300 transition duration-300 p-8 text-center">
-                <div class="bg-cyan-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-5">
-                    <box-icon type='solid' name='cart' color='#06b6d4' size="md"></box-icon>
+                <!-- CARD SECTION -->
+                <div class="flex items-center p-8 bg-white shadow rounded-lg">
+                    <div
+                        class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 bg-cyan-100 rounded-full mr-6">
+                        <box-icon name='cart-download' color='#4c5457'></box-icon>
+                    </div>
+                    <div>
+                        <span class="block text-2xl font-bold">Order Section</span>
+                        <span class="block text-gray-500">Make a Schedule</span>
+                    </div>
+                    <button
+                        class="inline-flex flex-shrink-0 items-center justify-center h-12 w-12 bg-cyan-400 hover:bg-cyan-600 rounded-full ml-auto">
+                        <box-icon name='chevron-right' type='solid' color='#ffffff'></box-icon>
+                    </button>
                 </div>
-                <h3 class="text-2xl font-bold text-cyan-500 mb-3">Training Sessions</h3>
-                <p class="text-gray-600 mb-6">Train regularly to get stronger and healthier. Start now!</p>
-                <button class="bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition">
-                    <a href="#">View More</a>
-                </button>
-            </div>
 
-            <div class="bg-white rounded-3xl shadow-2xl hover:shadow-cyan-300 transition duration-300 p-8 text-center">
-                <div class="bg-cyan-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-5">
-                    <box-icon type='solid' name='book-content' color='#06b6d4' size="md"></box-icon>
+                <div class="flex items-center p-8 bg-white shadow rounded-lg">
+                    <div
+                        class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 bg-cyan-100 rounded-full mr-6">
+                        <box-icon name='tv' color='#4c5457'></box-icon>
+                    </div>
+                    <div>
+                        <span class="block text-2xl font-bold">Premium Content</span>
+                        <span class="block text-gray-500">Better Content</span>
+                    </div>
+                    <a href="register_premium_page.html"
+                        class="inline-flex flex-shrink-0 items-center justify-center h-12 w-12 bg-cyan-400 hover:bg-cyan-500 rounded-full ml-auto">
+                        <box-icon name='chevron-right' type='solid' color='#ffffff'></box-icon>
+                    </a>
                 </div>
-                <h3 class="text-2xl font-bold text-cyan-500 mb-3">Premium Content</h3>
-                <p class="text-gray-600 mb-6">Access premium articles and guides to level up your knowledge.</p>
-                <button class="bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition">
-                    <a href="register_premium_page.html">Unlock</a>
-                </button>
-            </div>
 
-            <div class="bg-white rounded-3xl shadow-2xl hover:shadow-cyan-300 transition duration-300 p-8 text-center">
-                <div class="bg-cyan-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-5">
-                    <box-icon type='solid' name='select-multiple' color='#06b6d4' size="md"></box-icon>
+                <div class="flex items-center p-8 bg-white shadow rounded-lg">
+                    <div
+                        class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 bg-cyan-100 rounded-full mr-6">
+                        <box-icon name='book-bookmark' type='solid' color='#4c5457'></box-icon>
+                    </div>
+                    <div>
+                        <span class="block text-2xl font-bold">Exercise Tips</span>
+                        <span class="block text-gray-500">Make it easy</span>
+                    </div>
+                    <button
+                        class="inline-flex flex-shrink-0 items-center justify-center h-12 w-12 bg-cyan-400 hover:bg-cyan-600 rounded-full ml-auto">
+                        <box-icon name='chevron-right' type='solid' color='#ffffff'></box-icon>
+                    </button>
                 </div>
-                <h3 class="text-2xl font-bold text-cyan-500 mb-3">Exercise Tips</h3>
-                <p class="text-gray-600 mb-6">Effective and safe exercise tips to get the most out of your workout.</p>
-                <button class="bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition">
-                    <a href="#">Read Tips</a>
-                </button>
-            </div>
-        </div>
-    </section>
+            </section>
+        </main>
+    </div>
+
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
 
 </html>
