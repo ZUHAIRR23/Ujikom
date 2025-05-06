@@ -11,6 +11,23 @@
     <title>Training Page</title>
 </head>
 
+<style>
+    .scrollbar-custom::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .scrollbar-custom::-webkit-scrollbar-track {
+        background: #e5e7eb;
+        /* Tailwind gray-200 */
+    }
+
+    .scrollbar-custom::-webkit-scrollbar-thumb {
+        background-color: #6b7280;
+        /* Tailwind gray-500 */
+        border-radius: 10px;
+    }
+</style>
+
 <body class="flex bg-gray-100 min-h-screen">
     <div class="flex-grow text-gray-800">
         <!-- HEADER -->
@@ -67,11 +84,223 @@
                 </a>
             </div>
             <section class="flex items-center px-24 ">
-                <div class="container px-10 py-8 bg-white">
+                <div class="container px-10 py-8 bg-white rounded-2xl">
+
+                    <!-- Trainer -->
                     <div class="mb-5">
                         <label for="base-input" class="block mb-2 text-sm font-medium">Trainer</label>
-                        <input type="text" id="base-input" class="bg-gray-100 border border-white-300 text-sm rounded-lg focus:ring-cyan-400 focus:border-cyan-400 block w-full p-2.5">
+                        <input type="text" class="bg-gray-200 border-2 border-gray-300 placeholder-gray-400 w-full rounded-lg px-5 py-2" placeholder="Who's your trainer" type="text">
                     </div>
+
+                    <!-- Training -->
+                    <div class="mb-5">
+                        <label for="base-input" class="block mb-2 text-sm font-medium">Training Category</label>
+                        <button id="dropdownTrainingButton" data-dropdown-toggle="dropdownTraining"
+                            data-dropdown-placement="bottom" type="button"
+                            class="bg-gray-200 px-5 py-2 rounded-lg border-2 border-gray-300 flex justify-between w-full text-gray-400">Choose
+                            your exercise<box-icon name='chevron-down'></box-icon></button>
+                        <div id="dropdownTraining"
+                            class="z-10 hidden bg-white rounded-sm w-80 border-2 border-gray-400 bg-gray-300">
+                            <div class="p-3">
+                                <label for="input-group-search" class="sr-only">Search</label>
+                                <div class="relative">
+                                    <div
+                                        class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
+                                        <svg class="w-4 h-4 text-gray-400" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                        </svg>
+                                    </div>
+                                    <input type="text" id="input-group-search"
+                                        class="block w-full p-2 ps-10 text-sm text-gray-600 border border-gray-300 rounded-lg bg-gray-50 focus:ring-gray-400 focus:border-gray-400 placeholder-gray-400"
+                                        placeholder="Search exercise">
+                                </div>
+                            </div>
+                            <ul class="h-48 px-3 pb-3 overflow-y-auto text-sm scrollbar-custom"
+                                aria-labelledby="dropdownSearchButton">
+                                <li>
+                                    <div class="flex items-center ps-2 rounded-sm hover:bg-gray-500">
+                                        <input id="checkbox-item-11" type="checkbox" value=""
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500">
+                                        <label for="checkbox-item-11"
+                                            class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded-sm">Bonnie
+                                            Green</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center ps-2 rounded-sm hover:bg-gray-500">
+                                        <input checked id="checkbox-item-12" type="checkbox" value=""
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500">
+                                        <label for="checkbox-item-12"
+                                            class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded-sm">Jese
+                                            Leos</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center ps-2 rounded-sm hover:bg-gray-500">
+                                        <input id="checkbox-item-13" type="checkbox" value=""
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500">
+                                        <label for="checkbox-item-13"
+                                            class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded-sm">Michael
+                                            Gough</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center ps-2 rounded-sm hover:bg-gray-500">
+                                        <input id="checkbox-item-14" type="checkbox" value=""
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500">
+                                        <label for="checkbox-item-14"
+                                            class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded-sm">Robert
+                                            Wall</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center ps-2 rounded-sm hover:bg-gray-500">
+                                        <input id="checkbox-item-15" type="checkbox" value=""
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500">
+                                        <label for="checkbox-item-15"
+                                            class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded-sm">Joseph
+                                            Mcfall</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center ps-2 rounded-sm hover:bg-gray-500">
+                                        <input id="checkbox-item-16" type="checkbox" value=""
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500">
+                                        <label for="checkbox-item-16"
+                                            class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded-sm">Leslie
+                                            Livingston</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center ps-2 rounded-sm hover:bg-gray-500">
+                                        <input id="checkbox-item-17" type="checkbox" value=""
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500">
+                                        <label for="checkbox-item-17"
+                                            class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded-sm">Roberta
+                                            Casas</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- DatePicker -->
+                    <div class="mb-5">
+                        <label for="base-input" class="block mb-2 text-sm font-medium">Date</label>
+                        <div class="w-full flex items-center">
+                            <input id="datepicker-actions" datepicker datepicker-light datepicker-buttons
+                                datepicker-autoselect-today type="text"
+                                class="bg-gray-200 border-2 border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-gray-400 focus:border-gray-400 block ps-10 p-2.5 w-full placeholder-gray-400"
+                                placeholder="Select date">
+                        </div>
+                    </div>
+
+                    <!-- Time -->
+                     <div class="mb-5">
+                        <label for="base-input" class="block mb-2 text-sm font-medium">Time</label>
+                        <div class="grid grid-cols-3 gap-2">
+                            <div class="grid-span-1">
+                                <input type="text" class="bg-gray-200 border-2 border-gray-300 placeholder-gray-400 w-full rounded-lg px-5 py-2" placeholder="From" type="time" min="06:00" max="17:00" required>
+                            </div>
+                            <div class="grid-span-1">
+                                <div class="flex items-center justify-center">
+                                    <p class="text-xl font-medium text-center">To</p>
+                                </div>
+                            </div>
+                            <div class="grid-span-1">
+                                <input type="text" class="bg-gray-200 border-2 border-gray-300 placeholder-gray-400 w-full rounded-lg px-5 py-2" placeholder="Until" type="time" min="07:00" max="21:50" required>
+                            </div>
+                        </div>
+                     </div>
+
+                     <!-- Payment Method -->
+                    <div class="mb-24">
+                        <label for="base-input" class="block mb-2 text-sm font-medium">Payment Method</label>
+                        <button id="dropdownPaymentButton" data-dropdown-toggle="dropdownPayment"
+                            data-dropdown-placement="bottom" type="button"
+                            class="bg-gray-200 px-5 py-2 rounded-lg border-2 border-gray-300 flex justify-between w-full text-gray-400">Choose
+                            your Payment<box-icon name='chevron-down'></box-icon></button>
+                        <div id="dropdownPayment"
+                            class="z-10 hidden bg-white rounded-sm w-80 border-2 border-gray-400 bg-gray-300">
+                            <ul class="h-48 py-2 overflow-y-auto text-gray-700 dark:text-gray-200 scrollbar-custom"
+                                aria-labelledby="dropdownUsersButton">
+                                <li>
+                                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 text-black">
+                                        <img class="w-6 h-6 me-2 rounded-full"
+                                            src="https://i.pinimg.com/736x/ac/86/db/ac86db3ab0ddad25ed15bad0a6104802.jpg"
+                                            alt="Jese image">
+                                        Jese Leos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 text-black">
+                                        <img class="w-6 h-6 me-2 rounded-full"
+                                            src="https://i.pinimg.com/736x/ac/86/db/ac86db3ab0ddad25ed15bad0a6104802.jpg"
+                                            alt="Jese image">
+                                        Robert Gough
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 text-black">
+                                        <img class="w-6 h-6 me-2 rounded-full"
+                                            src="https://i.pinimg.com/736x/ac/86/db/ac86db3ab0ddad25ed15bad0a6104802.jpg"
+                                            alt="Jese image">
+                                        Bonnie Green
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 text-black">
+                                        <img class="w-6 h-6 me-2 rounded-full"
+                                            src="https://i.pinimg.com/736x/ac/86/db/ac86db3ab0ddad25ed15bad0a6104802.jpg"
+                                            alt="Jese image">
+                                        Leslie Livingston
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 text-black">
+                                        <img class="w-6 h-6 me-2 rounded-full"
+                                            src="https://i.pinimg.com/736x/ac/86/db/ac86db3ab0ddad25ed15bad0a6104802.jpg"
+                                            alt="Jese image">
+                                        Michael Gough
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 text-black">
+                                        <img class="w-6 h-6 me-2 rounded-full"
+                                            src="https://i.pinimg.com/736x/ac/86/db/ac86db3ab0ddad25ed15bad0a6104802.jpg"
+                                            alt="Jese image">
+                                        Joseph Mcfall
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 text-black">
+                                        <img class="w-6 h-6 me-2 rounded-full"
+                                            src="https://i.pinimg.com/736x/ac/86/db/ac86db3ab0ddad25ed15bad0a6104802.jpg"
+                                            alt="Jese image">
+                                        Roberta Casas
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 text-black">
+                                        <img class="w-6 h-6 me-2 rounded-full"
+                                            src="https://i.pinimg.com/736x/ac/86/db/ac86db3ab0ddad25ed15bad0a6104802.jpg"
+                                            alt="Jese image">
+                                        Neil Sims
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Price & Submit -->
+                     <div class="mb-5">
+                        <div class="flex justify-between">
+                            <p class="text-xl font-medium">Rp.50.000,00</p>
+                            <button class="bg-cyan-400 px-8 py-2 rounded-lg text-white hover:bg-cyan-600">Continue</button>
+                        </div>
+                     </div>
                 </div>
             </section>
         </main>
