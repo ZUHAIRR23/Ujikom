@@ -79,17 +79,17 @@
         <main class="p-6 sm:p-10 space-y-6">
             <div class="flex justify-between">
                 <h1 class="text-3xl font-bold my-3">Order Training</h1>
-                <a href="training_page.html">
-                    Go back
-                </a>
+                <a href="training_page.html" class="text-indigo-600 hover:text-indigo-800 font-semibold text-sm">← Go Back</a>
             </div>
-            <section class="flex items-center px-24 ">
+            <section class="flex items-center px-24">
                 <div class="container px-10 py-8 bg-white rounded-2xl">
 
                     <!-- Trainer -->
                     <div class="mb-5">
                         <label for="base-input" class="block mb-2 text-sm font-medium">Trainer</label>
-                        <input type="text" class="bg-gray-200 border-2 border-gray-300 placeholder-gray-400 w-full rounded-lg px-5 py-2" placeholder="Who's your trainer" type="text">
+                        <input type="text"
+                            class="bg-gray-200 border-2 border-gray-300 placeholder-gray-400 w-full rounded-lg px-5 py-2"
+                            placeholder="Who's your trainer" type="text">
                     </div>
 
                     <!-- Training -->
@@ -202,7 +202,9 @@
                         <label for="base-input" class="block mb-2 text-sm font-medium">Time</label>
                         <div class="grid grid-cols-3 gap-2">
                             <div class="grid-span-1">
-                                <input type="text" class="bg-gray-200 border-2 border-gray-300 placeholder-gray-400 w-full rounded-lg px-5 py-2" placeholder="From" type="time" min="06:00" max="17:00" required>
+                                <input type="text"
+                                    class="bg-gray-200 border-2 border-gray-300 placeholder-gray-400 w-full rounded-lg px-5 py-2"
+                                    placeholder="From" type="time" min="06:00" max="17:00" required>
                             </div>
                             <div class="grid-span-1">
                                 <div class="flex items-center justify-center">
@@ -210,7 +212,9 @@
                                 </div>
                             </div>
                             <div class="grid-span-1">
-                                <input type="text" class="bg-gray-200 border-2 border-gray-300 placeholder-gray-400 w-full rounded-lg px-5 py-2" placeholder="Until" type="time" min="07:00" max="21:50" required>
+                                <input type="text"
+                                    class="bg-gray-200 border-2 border-gray-300 placeholder-gray-400 w-full rounded-lg px-5 py-2"
+                                    placeholder="Until" type="time" min="07:00" max="21:50" required>
                             </div>
                         </div>
                     </div>
@@ -295,12 +299,13 @@
                     </div>
 
                     <!-- Price & Submit -->
-                     <div class="mb-5">
+                    <div class="mb-5">
                         <div class="flex justify-between">
                             <p class="text-xl font-medium">Rp.50.000,00</p>
-                            <button class="bg-cyan-400 px-8 py-2 rounded-lg text-white hover:bg-cyan-600">Continue</button>
+                            <button
+                                class="bg-cyan-400 px-8 py-2 rounded-lg text-white hover:bg-cyan-600">Continue</button>
                         </div>
-                     </div>
+                    </div>
                 </div>
             </section>
         </main>

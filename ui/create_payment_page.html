@@ -2,15 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Payment</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <title>Payment</title>
 </head>
 
 <body class="flex bg-gray-100 min-h-screen">
+
     <!-- SIDEBAR -->
     <aside class="hidden sm:flex sm:flex-col">
         <a href="#"
@@ -67,8 +68,9 @@
             </div>
         </div>
     </aside>
+
+    <!-- MAIN CONTENT -->
     <div class="flex-grow text-gray-800">
-        <!-- HEADER -->
         <header class="flex items-center h-20 px-6 sm:px-10 bg-white">
             <span class="text-2xl font-bold mr-4">
                 FITNESS
@@ -113,70 +115,72 @@
                 </div>
             </div>
         </header>
-        <div class="p-8 bg-gray-50 min-h-screen">
-            <div class="flex items-center justify-between mb-6">
-                <h2 class="text-3xl font-bold text-gray-800">Transaction History</h2>
-                <a href="training_page.html"
-                    class="bg-cyan-400 rounded-full p-3 text-white hover:bg-cyan-500 transition">
-                    Continue
-                </a>
+
+        <!-- CONTENT -->
+        <main class="p-8 bg-gray-50 min-h-screen">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800">Create Payment</h2>
+                <a href="payment_page.html" class="text-indigo-600 hover:text-indigo-800 font-semibold text-sm">← Go Back</a>
             </div>
 
-            <a href="create_payment_page.html"
-                class="bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition duration-200 mb-4">
-                Create Payment
-            </a>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- FORM -->
+                <form class="bg-white p-6 rounded-lg shadow-lg space-y-4">
+                    <div>
+                        <label class="block font-semibold mb-1">Payment Type</label>
+                        <select class="w-full border border-gray-300 rounded-lg px-4 py-2">
+                            <option>Transfer</option>
+                            <option>QRIS</option>
+                            <option>Cash</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Amount</label>
+                        <input type="number" class="w-full border border-gray-300 rounded-lg px-4 py-2"
+                            placeholder="Rp 150.000" />
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Phone Number</label>
+                        <input type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-2"
+                            placeholder="08xxxxxxxxxx" />
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Bank Name</label>
+                        <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2"
+                            placeholder="BCA, BNI, Mandiri..." />
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Upload Payment Proof</label>
+                        <input type="file" class="w-full border border-gray-300 rounded-lg px-4 py-2" />
+                    </div>
+                    <button
+                        class="bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition duration-200 w-full">
+                        Submit Payment
+                    </button>
+                </form>
 
-            <div class="overflow-x-auto mt-6 bg-white rounded-lg shadow-lg">
-                <table class="min-w-full text-sm text-left text-gray-600">
-                    <thead class="bg-indigo-100 text-gray-800">
-                        <tr>
-                            <th class="py-3 px-6 font-medium">Name</th>
-                            <th class="py-3 px-6 font-medium">Transaction</th>
-                            <th class="py-3 px-6 font-medium">Price</th>
-                            <th class="py-3 px-6 font-medium">Date</th>
-                            <th class="py-3 px-6 font-medium text-center">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-b hover:bg-gray-50">
-                            <td class="py-3 px-6">John</td>
-                            <td class="py-3 px-6">Pembayaran</td>
-                            <td class="py-3 px-6">Rp 150.000</td>
-                            <td class="py-3 px-6">2025-04-29</td>
-                            <td class="py-3 px-6 text-center">
-                                <button
-                                    class="bg-red-500 hover:bg-red-600 text-white py-1 px-3 rounded-lg">Delete</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr class="border-b hover:bg-gray-50">
-                            <td class="py-3 px-6">John</td>
-                            <td class="py-3 px-6">Pembayaran</td>
-                            <td class="py-3 px-6">Rp 150.000</td>
-                            <td class="py-3 px-6">2025-04-29</td>
-                            <td class="py-3 px-6 text-center">
-                                <button
-                                    class="bg-red-500 hover:bg-red-600 text-white py-1 px-3 rounded-lg">Delete</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr class="border-b hover:bg-gray-50">
-                            <td class="py-3 px-6">John</td>
-                            <td class="py-3 px-6">Pembayaran</td>
-                            <td class="py-3 px-6">Rp 150.000</td>
-                            <td class="py-3 px-6">2025-04-29</td>
-                            <td class="py-3 px-6 text-center">
-                                <button
-                                    class="bg-red-500 hover:bg-red-600 text-white py-1 px-3 rounded-lg">Delete</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <!-- PAYMENT INFO -->
+                <div class="bg-white p-6 rounded-lg shadow-lg space-y-4">
+                    <h3 class="text-xl font-bold mb-4">Payment Instructions</h3>
+                    <div>
+                        <p class="font-semibold">Account Number</p>
+                        <p>1234567890</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Bank Name</p>
+                        <p>BCA</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Bank Account Holder</p>
+                        <p>PT Fitness Jaya</p>
+                    </div>
+                    <div class="pt-4">
+                        <p class="text-sm text-gray-500">Please transfer the exact amount to the account above. Then
+                            upload the payment proof and click "Submit Payment".</p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </main>
     </div>
 </body>
 
